@@ -64,6 +64,11 @@ LOCAL_C_INCLUDES := \
     $(LOCAL_PATH)/../gralloc \
     hardware/nvidia/core-headers
 
+# We need this because the current asm generates the following link error:
+# requires unsupported dynamic reloc R_ARM_REL32; recompile with -fPIC
+# Bug: 16853291
+LOCAL_LDFLAGS := -Wl,-Bsymbolic
+
 LOCAL_CFLAGS += -DLOG_TAG=\"hwcomposer\"
 ifeq ($(BOARD_HAVE_VID_ROUTING_TO_HDMI),true)
     LOCAL_CFLAGS += -DCINEMA_MODE=1
