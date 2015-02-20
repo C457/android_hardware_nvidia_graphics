@@ -372,7 +372,7 @@ static int NvGrAlloc (alloc_device_t* dev, int width, int height, int format,
     }
 
     switch (format) {
-    case HAL_PIXEL_FORMAT_RAW_SENSOR:
+    case HAL_PIXEL_FORMAT_RAW16:
     case HAL_PIXEL_FORMAT_BLOB:
     case HAL_PIXEL_FORMAT_Y8:
     case HAL_PIXEL_FORMAT_Y16:
@@ -784,7 +784,7 @@ int NvGrAllocInternal (NvGrModule *Ctx, int width, int height, int format,
         SurfAlign = NvRmSurfaceComputeAlignment(Ctx->Rm, Surf);
         break;
 
-    case HAL_PIXEL_FORMAT_RAW_SENSOR:
+    case HAL_PIXEL_FORMAT_RAW16:
         NV_ASSERT(SurfCount == 1);
         NV_ASSERT(Surf[0].Layout == NvRmSurfaceLayout_Pitch);
         Surf[0].Offset = 0;

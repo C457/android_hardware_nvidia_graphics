@@ -32,7 +32,7 @@
     MAP(NVGR_PIXEL_FORMAT_YUV420,    NvColorFormat_Y8)       \
     MAP(NVGR_PIXEL_FORMAT_UYVY,      NvColorFormat_UYVY)     \
     MAP(NVGR_PIXEL_FORMAT_ABGR_8888, NvColorFormat_R8G8B8A8) \
-    MAP(HAL_PIXEL_FORMAT_RAW_SENSOR, NvColorFormat_L16)
+    MAP(HAL_PIXEL_FORMAT_RAW16,      NvColorFormat_L16)
 
 static NV_INLINE NvColorFormat
 NvGrGetNvFormat (int f)
