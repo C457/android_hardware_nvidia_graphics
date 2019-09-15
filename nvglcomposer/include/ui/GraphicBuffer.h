@@ -31,6 +31,7 @@
 #include <nativebase/nativebase.h>
 
 #include <hardware/gralloc.h>
+struct ANativeWindowBuffer;
 
 namespace android {
 
@@ -132,6 +133,18 @@ public:
     GraphicBuffer(uint32_t inWidth, uint32_t inHeight, PixelFormat inFormat,
             uint32_t inLayerCount, uint32_t inUsage, uint32_t inStride,
             native_handle_t* inHandle, bool keepOwnership);
+
+    GraphicBuffer(const native_handle_t* inHandle, HandleWrapMethod method, uint32_t inWidth,
+                  uint32_t inHeight, PixelFormat inFormat, uint32_t inUsage, uint32_t inStride);
+
+    GraphicBuffer(uint32_t inWidth, uint32_t inHeight, PixelFormat inFormat, uint32_t inUsage,
+                  uint32_t inStride, native_handle_t* inHandle, bool keepOwnership);
+
+    GraphicBuffer(uint32_t inWidth, uint32_t inHeight, PixelFormat inFormat, uint32_t inUsage);
+
+    // create a buffer from an existing ANativeWindowBuffer
+    GraphicBuffer(ANativeWindowBuffer* buffer, bool keepOwnership);
+
     GraphicBuffer(uint32_t inWidth, uint32_t inHeight, PixelFormat inFormat,
             uint32_t inUsage, std::string requestorName = "<Unknown>");
 
@@ -229,6 +242,10 @@ private:
 
     GraphicBufferMapper& mBufferMapper;
     ssize_t mInitCheck;
+
+    // If we're wrapping another buffer then this reference will make sure it
+    // doesn't get freed.
+    sp<ANativeWindowBuffer> mWrappedBuffer;
 
     uint64_t mId;
 
