@@ -27,7 +27,7 @@
 #include <sys/select.h>
 
 #include <cutils/atomic.h>
-#include <cutils/log.h>
+#include <log/log.h>
 
 #include "nvassert.h"
 #include "hdcp_up.h"

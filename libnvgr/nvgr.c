@@ -11,7 +11,7 @@
 #include <fcntl.h>
 #include <sys/resource.h>
 #include <cutils/atomic.h>
-#include <cutils/log.h>
+#include <log/log.h>
 #include <sync/sync.h>
 
 #include "nvgr.h"

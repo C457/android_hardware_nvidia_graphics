@@ -22,7 +22,7 @@
 #define _NVHWC_H
 
 #include <hardware/hwcomposer.h>
-#include <cutils/log.h>
+#include <log/log.h>
 #include <sync/sync.h>
 
 /* Compatibility */

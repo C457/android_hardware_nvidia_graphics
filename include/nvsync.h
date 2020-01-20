@@ -12,7 +12,7 @@
 #define NVSYNC_H
 
 #include "sync/sync.h"
-#include "cutils/log.h"
+#include "log/log.h"
 #include "nvassert.h"
 #include "nvrm_channel.h"
 #include "nvgr.h"
