@@ -82,10 +82,6 @@ hwc_dump_display_contents(hwc_display_contents_t *list)
                     case HAL_PIXEL_FORMAT_RGB_888:   APPEND(" RGB_888");   break;
                     case HAL_PIXEL_FORMAT_RGB_565:   APPEND(" RGB_565");   break;
                     case HAL_PIXEL_FORMAT_BGRA_8888: APPEND(" BGRA_8888"); break;
-#ifndef PLATFORM_IS_KITKAT
-                    case HAL_PIXEL_FORMAT_RGBA_5551: APPEND(" RGBA_5551"); break;
-                    case HAL_PIXEL_FORMAT_RGBA_4444: APPEND(" RGBA_4444"); break;
-#endif
                     case NVGR_PIXEL_FORMAT_YUV420:   APPEND(" YUV420");    break;
                     case NVGR_PIXEL_FORMAT_YUV422:   APPEND(" YUV422");    break;
                     case NVGR_PIXEL_FORMAT_YUV422R:  APPEND(" YUV422R");   break;

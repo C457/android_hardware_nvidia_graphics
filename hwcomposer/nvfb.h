@@ -58,10 +58,6 @@ static inline int nvfb_translate_hal_format(int format)
         return TEGRA_FB_WIN_FMT_B5G6R5;
     case HAL_PIXEL_FORMAT_BGRA_8888:
         return TEGRA_FB_WIN_FMT_B8G8R8A8;
-#ifndef PLATFORM_IS_KITKAT
-    case HAL_PIXEL_FORMAT_RGBA_5551:
-        return TEGRA_FB_WIN_FMT_AB5G5R5;
-#endif
     case NVGR_PIXEL_FORMAT_YUV420:
         return TEGRA_FB_WIN_FMT_YCbCr420P;
     case NVGR_PIXEL_FORMAT_YUV422:

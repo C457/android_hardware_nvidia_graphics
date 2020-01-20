@@ -14,16 +14,8 @@
 #include <hardware/gralloc.h>
 #include <nvassert.h>
 
-#ifdef PLATFORM_IS_KITKAT
 #define MAP_HAL_PIXEL_FORMAT_5551
 #define MAP_HAL_PIXEL_FORMAT_4444
-#else
-#define MAP_HAL_PIXEL_FORMAT_5551 \
-    MAP(HAL_PIXEL_FORMAT_RGBA_5551,  NvColorFormat_R5G5B5A1)
-#define MAP_HAL_PIXEL_FORMAT_4444 \
-    MAP(HAL_PIXEL_FORMAT_RGBA_4444,  NvColorFormat_R4G4B4A4)
-#endif
-
 
 /*
  * Mapping of HAL formats to NvColor formats.
