@@ -12,6 +12,8 @@ LOCAL_SHARED_LIBRARIES := \
 
 LOCAL_CFLAGS += -DLOG_TAG=\"nvgrapi\"
 
-LOCAL_C_INCLUDES := $(LOCAL_PATH)/../include
+LOCAL_C_INCLUDES := \
+    hardware/nvidia/core-headers \
+    $(LOCAL_PATH)/../include
 
 include $(BUILD_SHARED_LIBRARY)
