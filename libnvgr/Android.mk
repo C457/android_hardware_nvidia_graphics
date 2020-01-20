@@ -14,6 +14,7 @@ LOCAL_CFLAGS += -DLOG_TAG=\"nvgrapi\"
 
 LOCAL_C_INCLUDES := \
     hardware/nvidia/core-headers \
+    $(LOCAL_PATH)/../gralloc \
     $(LOCAL_PATH)/../include
 
 include $(BUILD_SHARED_LIBRARY)
