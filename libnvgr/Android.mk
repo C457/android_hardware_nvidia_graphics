@@ -8,6 +8,7 @@ LOCAL_MODULE := libnvgr
 LOCAL_SHARED_LIBRARIES := \
 	libhardware \
 	libcutils \
+        liblog \
 	libsync
 
 LOCAL_CFLAGS += -DLOG_TAG=\"nvgrapi\"
