@@ -60,7 +60,8 @@ LOCAL_SRC_FILES := \
 
 LOCAL_C_INCLUDES := \
     $(LOCAL_PATH)/../include \
-    $(LOCAL_PATH)/../gralloc
+    $(LOCAL_PATH)/../gralloc \
+    hardware/nvidia/core-headers
 
 LOCAL_CFLAGS += -DLOG_TAG=\"hwcomposer\"
 ifeq ($(BOARD_HAVE_VID_ROUTING_TO_HDMI),true)
