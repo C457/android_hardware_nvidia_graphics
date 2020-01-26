@@ -73,7 +73,7 @@
 #include "nvcms_profile.h"
 
 #ifdef ANDROID
-#include <system/window.h>
+#include <cutils/native_handle.h>
 #endif
 
 #if defined(__cplusplus)
