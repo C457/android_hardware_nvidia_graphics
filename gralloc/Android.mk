@@ -36,7 +36,7 @@ LOCAL_CFLAGS += -DLOG_TAG=\"gralloc\"
 
 LOCAL_C_INCLUDES := \
     $(LOCAL_PATH)/../include \
-    hardware/nvidia/core/include
+    hardware/nvidia/core-headers
 
 # This config can be used to reduce memory usage at the cost of performance.
 ifeq ($(BOARD_DISABLE_TRIPLE_BUFFERED_DISPLAY_SURFACES),true)
