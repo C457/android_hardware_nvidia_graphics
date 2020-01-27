@@ -37,6 +37,7 @@ LOCAL_SHARED_LIBRARIES := \
 	libnvrm \
 	libnvrm_graphics \
 	libnvos \
+        libshim_nvglcomposer \
 	libui \
 	libutils
 
